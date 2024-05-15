@@ -15,9 +15,13 @@ public class BowlingBall : MonoBehaviour
     public bool isResetting = false;
     public bool isBallResetting = false;
     private List<GameObject> allPins = new List<GameObject>();
+    public GameObject movingObject;
+    private Vector3 originalMovingPosition;
+    private bool isMovingObject = false;
 
     void Start()
     {
+        originalMovingPosition = movingObject.transform.position;
         originalPosition = transform.position;
         scoreText.text = "";
         GameObject[] pinObjects = GameObject.FindGameObjectsWithTag("BowlingPin");
@@ -41,13 +45,18 @@ public class BowlingBall : MonoBehaviour
             {
                 GetComponent<AudioSource>().PlayOneShot(hitSound);
                 hitPins.Add(collision.gameObject);
-                collision.gameObject.SetActive(false);
             }
         }
 
         if (collision.gameObject.CompareTag("BowlingEnd"))
         {
             throwCount++;
+            if (!isMovingObject)
+            {
+                StartCoroutine(MoveObject(movingObject, movingObject.transform.position + new Vector3(0, -0.800f, 0),
+                    1f));
+            }
+
             StartCoroutine(ResetPosition());
 
             if (throwCount == 2 || hitPins.Count == 10)
@@ -74,12 +83,16 @@ public class BowlingBall : MonoBehaviour
         yield return new WaitForSeconds(2);
         transform.position = originalPosition;
         isBallResetting = false;
+        if (!isMovingObject)
+        {
+            StartCoroutine(MoveObject(movingObject, originalMovingPosition, 1f));
+        }
     }
 
     IEnumerator ResetPins()
     {
         isResetting = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < allPins.Count; i++)
         {
             GameObject pin = allPins[i];
@@ -91,5 +104,28 @@ public class BowlingBall : MonoBehaviour
         scoreText.text = "";
         hitPins.Clear();
         isResetting = false;
+    }
+
+    IEnumerator MoveObject(GameObject obj, Vector3 targetPosition, float duration)
+    {
+        isMovingObject = true;
+        float elapsedTime = 0;
+        Vector3 startingPosition = obj.transform.position;
+
+        while (elapsedTime < duration)
+        {
+            float timeFraction = elapsedTime / duration;
+            obj.transform.position = Vector3.Lerp(startingPosition, targetPosition, timeFraction);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        obj.transform.position = targetPosition;
+        foreach (var pin in hitPins)
+        {
+            pin.SetActive(false);
+        }
+
+        isMovingObject = false;
     }
 }

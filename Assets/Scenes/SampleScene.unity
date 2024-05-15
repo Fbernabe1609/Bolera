@@ -4136,7 +4136,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736506052}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7054,7 +7054,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282344676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8621,8 +8621,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9334,6 +9334,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BowlingPin
       objectReference: {fileID: 0}
+    - target: {fileID: -4639522926039606018, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.813
+      objectReference: {fileID: 0}
+    - target: {fileID: -4639522926039606018, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.947
+      objectReference: {fileID: 0}
     - target: {fileID: -4521841849139128381, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
       propertyPath: m_TagString
       value: BowlingBallBlue
@@ -9490,6 +9498,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d7eb89909ccd80b42935a4541eca2df1, type: 2}
+    - target: {fileID: 3046518416979095581, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.874
+      objectReference: {fileID: 0}
     - target: {fileID: 3069598616704991970, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10359,6 +10371,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
+  movingObject: {fileID: 1993168110}
 --- !u!82 &1661875015
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11051,6 +11064,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
+  movingObject: {fileID: 1993168110}
 --- !u!82 &1768363673
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11427,7 +11441,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.04e-43, y: -1.5226319e-38, z: 8.04e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 8e-45, w: 1.6734e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -11996,9 +12010,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4592956391713993908, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 69694875}
-    - targetCorrespondingSourceObject: {fileID: 2871854915733156399, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934399454}
   m_SourcePrefab: {fileID: 100100000, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
 --- !u!1 &1847747487 stripped
 GameObject:
@@ -12847,7 +12858,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929513975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13110,28 +13121,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16582051, y: 0.13314141, z: 0.08316138}
   m_Center: {x: 0.016335737, y: 0.0000019068617, z: 0.04158069}
---- !u!1 &1934399448 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2871854915733156399, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
-  m_PrefabInstance: {fileID: 1825262782}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1934399453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2871854915733156396, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
   m_PrefabInstance: {fileID: 1825262782}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1934399454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934399448}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a367a3e0cb0494e83f40a17803e711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1940379414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1137414348868702924, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
@@ -13446,6 +13440,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
+  movingObject: {fileID: 1993168110}
 --- !u!82 &1952896102
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13952,6 +13947,111 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1658205, y: 0.1331414, z: 0.08316138}
   m_Center: {x: 0.01633955, y: -4.869566e-10, z: 0.04158069}
+--- !u!1 &1993168110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993168114}
+  - component: {fileID: 1993168113}
+  - component: {fileID: 1993168112}
+  - component: {fileID: 1993168111}
+  m_Layer: 0
+  m_Name: MovingWall
+  m_TagString: BowlingEnd
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1993168111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993168110}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1993168112
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993168110}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1993168113
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993168110}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1993168114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993168110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.635, y: 1.1264, z: 5.9026}
+  m_LocalScale: {x: 0.01860722, y: 1.3527101, z: 1.0169194}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027396953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8144394004440419581, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
@@ -14583,4 +14683,5 @@ SceneRoots:
   - {fileID: 1282344680}
   - {fileID: 1926030789}
   - {fileID: 736506056}
+  - {fileID: 1993168114}
   - {fileID: 444135202}
