@@ -63,10 +63,15 @@ public class BowlingBall : MonoBehaviour
             {
                 if (hitPins.Count == 10 && throwCount == 1)
                 {
+                    scoreText.color = Color.yellow;
+                    scoreText.text = "STRIKE!";
                     GetComponent<AudioSource>().PlayOneShot(strikeSound);
                 }
-
-                scoreText.text = "Total pins knocked: " + hitPins.Count;
+                else
+                {
+                    scoreText.text = "Total pins knocked: " + hitPins.Count;
+                }
+                
                 StartCoroutine(ResetPins());
                 throwCount = 0;
             }
@@ -101,9 +106,12 @@ public class BowlingBall : MonoBehaviour
             bowlingPin.ResetPosition();
         }
 
-        scoreText.text = "";
         hitPins.Clear();
         isResetting = false;
+        
+        yield return new WaitForSeconds(1.5f);
+        scoreText.text = "";
+        scoreText.color = Color.white;
     }
 
     IEnumerator MoveObject(GameObject obj, Vector3 targetPosition, float duration)
