@@ -251,11 +251,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &69694876 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7179462289238023466, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
-  m_PrefabInstance: {fileID: 1825262782}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &76602397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10364,8 +10359,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
-  infoPanel: {fileID: 1021161665}
-  infoText: {fileID: 97000634}
 --- !u!82 &1661875015
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11058,8 +11051,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
-  infoPanel: {fileID: 824109770}
-  infoText: {fileID: 986088901}
 --- !u!82 &1768363673
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11436,7 +11427,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 1e-45, w: 5.581e-42}
+  m_BoundingSphereOverride: {x: 8.04e-43, y: -1.5226319e-38, z: 8.04e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -13141,7 +13132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a367a3e0cb0494e83f40a17803e711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 69694876}
 --- !u!1 &1940379414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1137414348868702924, guid: 5b458b6837dd3184cbb5d120ec822d8d, type: 3}
@@ -13456,8 +13446,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: f15c1c2134e877b48a2572493447c885, type: 3}
   isResetting: 0
   isBallResetting: 0
-  infoPanel: {fileID: 1949644339}
-  infoText: {fileID: 842777094}
 --- !u!82 &1952896102
 AudioSource:
   m_ObjectHideFlags: 0
